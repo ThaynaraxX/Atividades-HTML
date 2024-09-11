@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercícios JavaScript</title>
+    <script>
+        // 1. Mensagem de boas-vindas
+        function boasVindas() {
+            let nome = prompt("Por favor, digite seu nome:");
+            alert("Bem-vindo(a), " + nome + "!");
+        }
+
+        // 2. Conversão de Celsius para Fahrenheit
+        function converterTemperatura() {
+            let celsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
+            let fahrenheit = (celsius * 9/5) + 32;
+            alert(celsius + "°C equivalem a " + fahrenheit + "°F");
+        }
+
+        // 3. Área de um círculo
+        function calcularAreaCirculo() {
+            let raio = parseFloat(prompt("Digite o raio do círculo:"));
+            let area = Math.PI * raio * raio;
+            alert("A área do círculo é: " + area.toFixed(2));
+        }
+
+        // 4. Par ou ímpar
+        function verificarParOuImpar() {
+            let numero = parseInt(prompt("Digite um número:"));
+            if (numero % 2 === 0) {
+                alert("O número é par.");
+            } else {
+                alert("O número é ímpar.");
+            }
+        }
+
+        // 5. Média de três notas
+        function calcularMedia() {
+            let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+            let media = (nota1 + nota2 + nota3) / 3;
+            alert("A média das notas é: " + media.toFixed(2));
+        }
+
+        // 6. Positivo, negativo ou zero
+        function verificarNumero() {
+            let numero = parseFloat(prompt("Digite um número:"));
+            if (numero > 0) {
+                alert("O número é positivo.");
+            } else if (numero < 0) {
+                alert("O número é negativo.");
+            } else {
+                alert("O número é zero.");
+            }
+        }
+
+        // 7. Imprimindo números de 1 a 10
+        function imprimirNumeros() {
+            for (let i = 1; i <= 10; i++) {
+                console.log(i); 
+            }
+        }
+
+        // 8. Metros para centímetros
+        function converterMetrosParaCentimetros() {
+            let metros = parseFloat(prompt("Digite a distância em metros:"));
+            let centimetros = metros * 100;
+            alert(metros + " metros equivalem a " + centimetros + " centímetros.");
+        }
+
+        // 9. Quilômetros para metros
+        function converterQuilometrosParaMetros() {
+            let quilometros = parseFloat(prompt("Digite a distância em quilômetros:"));
+            let metros = quilometros * 1000;
+            alert(quilometros + " quilômetros equivalem a " + metros + " metros.");
+        }
+
+        // 10. Metros para léguas
+        function converterMetrosParaLeguas() {
+            let metros = parseFloat(prompt("Digite a distância em metros:"));
+            let leguas = metros / 5555.555556; 
+            alert(metros + " metros equivalem a " + leguas.toFixed(2) + " léguas.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercícios JavaScript</h1>
+    <button onclick="boasVindas()">Mensagem de boas-vindas</button>
+    <button onclick="converterTemperatura()">Converter Celsius para Fahrenheit</button>
+    <button onclick="calcularAreaCirculo()">Calcular área de um círculo</button>
+    <button onclick="verificarParOuImpar()">Verificar par ou ímpar</button>
+    <button onclick="calcularMedia()">Calcular média de três notas</button>
+    <button onclick="verificarNumero()">Verificar se um número é positivo, negativo ou zero</button>
+    <button onclick="imprimirNumeros()">Imprimir números de 1 a 10 (console)</button>
+    <button onclick="converterMetrosParaCentimetros()">Converter metros para centímetros</button>
+    <button onclick="converterQuilometrosParaMetros()">Converter quilômetros para metros</button>
+    <button onclick="converterMetrosParaLeguas()">Converter metros para léguas</button>
+</body>
+</html>
